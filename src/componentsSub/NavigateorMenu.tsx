@@ -11,7 +11,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaDiscord, FaGithub, FaLinkedin, FaSlack } from "react-icons/fa";
 import { SiLinktree } from "react-icons/si";
 import logo from "../assets/logo.png";
 
@@ -69,11 +69,49 @@ export function NavigatorMenu() {
                         " !bg-black hover:bg-black  !text-white text-[20px] hover:!bg-black hover:!text-white focus:!bg-black focus:!text-white data-[state=open]:!bg-purple-600 data-[state=open]:!text-white "
                       }
                     />
+                  </li>{" "}
+                  <li>
+                    <NavigationMenuLink
+                      render={
+                        <a
+                          href="https://discord.com/users/1562180668526436439"
+                          target="_blank"
+                          className="flex gap-3"
+                        >
+                          <FaDiscord className="text-[30px] text-blue-500" />
+                          <h1>Discord</h1>
+                        </a>
+                      }
+                      className={
+                        " !bg-black hover:bg-black  !text-white text-[20px] hover:!bg-black hover:!text-white focus:!bg-black focus:!text-white data-[state=open]:!bg-purple-600 data-[state=open]:!text-white "
+                      }
+                    />
                   </li>
                   <li>
                     <NavigationMenuLink
                       render={
-                        <a href="#" className="flex-row items-center gap-2">
+                        <a
+                          href="https://telos-shs6494.slack.com/team/U0C8SD7RU78"
+                          target="_blank"
+                          className="flex gap-3"
+                        >
+                          <FaSlack className="text-[30px] text-orange-400" />
+                          <h1>Slack</h1>
+                        </a>
+                      }
+                      className={
+                        " !bg-black hover:bg-black  !text-white text-[20px] hover:!bg-black hover:!text-white focus:!bg-black focus:!text-white data-[state=open]:!bg-purple-600 data-[state=open]:!text-white "
+                      }
+                    />
+                  </li>
+                  <li>
+                    <NavigationMenuLink
+                      render={
+                        <a
+                          href="#"
+                          target="_blank"
+                          className="flex-row items-center gap-2"
+                        >
                           <FaGithub />
                           Github
                         </a>

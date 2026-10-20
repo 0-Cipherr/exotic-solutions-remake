@@ -1,10 +1,4 @@
-import {
-  FaDiscord,
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-  FaSlack,
-} from "react-icons/fa";
+import { FaDiscord, FaGithub, FaLinkedin, FaSlack } from "react-icons/fa";
 
 function Quote() {
   return (
@@ -27,16 +21,18 @@ function Quote() {
         <a href="https://telos-shs6494.slack.com/team/U0C8SD7RU78">
           <FaSlack className="text-[30px] text-orange-400" />
         </a>
-        <a href="">
-          <FaInstagram className="text-[28px] text-purple-500" />
-        </a>
-        <a href="">
+        <a
+          href="https://www.linkedin.com/in/rafael-castillo-00129a425/"
+          target="_blank"
+        >
           <FaLinkedin className="text-[30px] text-blue-400 border rounded-md" />
         </a>{" "}
-        <a href="rcastillodev">
+        <a href="https://discord.com/users/1562180668526436439" target="_blank">
           <FaDiscord className="text-[30px] text-blue-500" />
         </a>{" "}
-        <FaGithub className="text-[28px]" />
+        <a href="https://github.com/0-Cipherr" target="_blank">
+          <FaGithub className="text-[30px] text-orange-400" />
+        </a>
       </div>
     </div>
   );
