@@ -26,6 +26,7 @@ function ProjectPost({
   link,
   linkLabel = "View Project",
   footer,
+  emblemSrc,
 }: ProjectPostProps) {
   return (
     <article
@@ -40,11 +41,15 @@ function ProjectPost({
         <div className="flex min-w-0 items-center gap-3">
           <div
             className="flex h-11 w-11 shrink-0 items-center justify-center
-              rounded-full border border-[#C6A15B]/40 bg-[#171410]
+              rounded-full border border-black bg-[#171410]
               text-sm font-semibold text-[#C6A15B]"
             aria-hidden="true"
           >
-            ES
+            <img
+              src={emblemSrc}
+              alt=""
+              className="border border-black rounded-full"
+            />
           </div>
 
           <div className="min-w-0">

@@ -1,9 +1,16 @@
 function Quote() {
   return (
-    <div className="hidden nd:block text-white">
-      <h1 className="text-white text-3xl w-70 m-auto mt-10">
-        "Simple, unique and great looking, website interface designer at a low
-        cost and at fast production timeframe.""
+    <div className="hidden md:block text-white m-auto  mt-auto  h-full  ">
+      <h1 className="text-[#e8dfcc]  text-lg w-90 text-center p-8  m-auto mt-auto">
+        Turning ideas into reality through custom software development, creative
+        problem-solving, and modern technology. From web applications and
+        automation tools to unique digital products and custom-built solutions,
+        each project combines clean code, thoughtful design, and practical
+        functionality. Focused on building scalable, efficient, and
+        user-friendly solutions, with an emphasis on quality, performance, and
+        attention to detail. Delivering innovative digital experiences with
+        affordable pricing and fast turnaround times, helping bring ideas from
+        concept to production without unnecessary complexity or cost.
       </h1>
     </div>
   );

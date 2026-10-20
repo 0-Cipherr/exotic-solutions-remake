@@ -19,59 +19,67 @@ const technologies = [
   // Programming Languages
   { name: "Solidity", Icon: SiSolidity, category: "Languages" },
   { name: "TypeScript", Icon: SiTypescript, category: "Languages" },
-  { name: "JavaScript", Icon: SiJavascript, category: "Languages" },
+  { name: "Flask", Icon: SiFlask, category: "Backend" },
+  { name: "Git", Icon: SiGit, category: "Tools" },
+
+  { name: "Node.js", Icon: SiNodedotjs, category: "Backend" },
+  { name: "React", Icon: SiReact, category: "Frontend" },
+
   { name: "Python", Icon: SiPython, category: "Languages" },
-  { name: "Java", Icon: FaJava, category: "Languages" },
   { name: "SQL", Icon: SiPostgresql, category: "Languages" },
+  { name: "Java", Icon: FaJava, category: "Languages" },
+  { name: "JavaScript", Icon: SiJavascript, category: "Languages" },
 
   // Frontend
-  { name: "React", Icon: SiReact, category: "Frontend" },
   { name: "Vite", Icon: SiVite, category: "Frontend" },
 
   // Backend
-  { name: "Node.js", Icon: SiNodedotjs, category: "Backend" },
   { name: "Express", Icon: SiExpress, category: "Backend" },
-  { name: "Flask", Icon: SiFlask, category: "Backend" },
 
   // Blockchain & Development
   { name: "OpenZeppelin", Icon: SiOpenzeppelin, category: "Blockchain" },
-  { name: "Git", Icon: SiGit, category: "Tools" },
 ];
+function LanguageGrid({ gridSize }: any) {
+  let currIndex = 0;
 
-function LanguageGrid() {
   return (
     <div className="mx-auto grid w-full grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-4">
-      {technologies.map(({ name, Icon }) => (
-        <div
-          key={name}
-          className="group flex flex-col items-center justify-center gap-4
+      {technologies.slice(0, gridSize).map((item, index) => {
+        const result = (
+          <>
+            <div
+              key={index}
+              className="group flex flex-col items-center justify-center gap-4
             rounded-xl border border-[#33291D] bg-[#11100F]
             px-4 py-7 transition-all duration-300
             hover:border-[#C6A15B]/60 hover:bg-[#171410]
             hover:shadow-[0_0_25px_rgba(198,161,91,0.07)]"
-        >
-          <Icon
-            size={40}
-            color="currentColor"
-            className="text-[#E8DFCC] transition-all duration-300
+            >
+              <item.Icon
+                size={40}
+                color="currentColor"
+                className="text-[#E8DFCC] transition-all duration-300
               group-hover:scale-110 group-hover:text-[#C6A15B]"
-            style={{
-              stroke: "currentColor",
-              strokeWidth: 0.6,
-              paintOrder: "stroke",
-            }}
-            aria-label={name}
-          />
+                style={{
+                  stroke: "currentColor",
+                  strokeWidth: 0.6,
+                  paintOrder: "stroke",
+                }}
+                aria-label={name}
+              />
 
-          <span
-            className="text-sm tracking-wide text-[#928675]
+              <span
+                className="text-sm tracking-wide text-[#928675]
               transition-colors duration-300
               group-hover:text-[#E8DFCC]"
-          >
-            {name}
-          </span>
-        </div>
-      ))}
+              >
+                {item.name}
+              </span>
+            </div>
+          </>
+        );
+        return result;
+      })}
     </div>
   );
 }

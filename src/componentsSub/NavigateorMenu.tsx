@@ -17,32 +17,38 @@ import logo from "../assets/logo.png";
 
 export function NavigatorMenu() {
   return (
-    <div className="border sm:p-2 md:p-0 bg-black border rounded-md text-white flex  justify-between ">
+    <div className="border border-[#33291D] border-t-0 border-r-0 border-l-0 text-[#e8dfcc] sm:p-2 md:p-0 bg-black  rounded-xs text-white flex  justify-between ">
       <div>
         <img src={logo} alt="Logo" className="w-50" />
       </div>
-      <div className="w-full  m-auto flex justify-end">
+      <div className="w-full  text-[#e8dfcc]  m-auto flex justify-end gap-3">
+        <button className="mt-auto mb-auto hover:animate-pulse">
+          <h1>Expirience</h1>
+        </button>
+        <button className="mt-auto mb-auto hover:animate-pulse">
+          <h1>Accomplishments </h1>
+        </button>
+
         <NavigationMenu className={"   mt-auto"}>
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger
                 className={
-                  "animate-pulse text-[19px] sm:text-[23px] md:text-[22px] !bg-black !text-white hover:!bg-black hover:!text-white focus:!bg-black focus:!text-white data-[state=open]:!bg-purple-600 data-[state=open]:!text-white "
+                  "hover:animate-pulse  text-[19px] sm:text-[23px] md:text-[22px] !bg-black !text-white hover:!bg-black hover:!text-white focus:!bg-black focus:!text-white data-[state=open]:!bg-purple-600 data-[state=open]:!text-white "
                 }
               >
-                Contact
+                <h1 className="text-[#e8dfcc] text-lg">Contact</h1>
               </NavigationMenuTrigger>
+
               <NavigationMenuContent
-                className={
-                  "border !bg-black hover:bg-black  !text-white text-[20px] hover:!bg-black hover:!text-white focus:!bg-black focus:!text-white data-[state=open]:!bg-purple-600 data-[state=open]:!text-white "
-                }
+                className={"border text-[#e8dfcc] bg-black   text-[20px]  "}
               >
-                <ul className="grid w-[130px] md:w-[200px] text-xs md:text-md">
+                <ul className="grid w-[130px] md:w-[200px]  text-xs md:text-md">
                   <li>
                     <NavigationMenuLink
                       render={
-                        <a href="#" className="flex-row items-center gap-2">
-                          <FaLinkedin />
+                        <a href="#" className="flex-row items-center gap-2 ">
+                          <FaLinkedin className="text-blue-500" />
                           LinkedIn
                         </a>
                       }
@@ -55,7 +61,7 @@ export function NavigatorMenu() {
                     <NavigationMenuLink
                       render={
                         <a href="#" className="flex-row items-center gap-2">
-                          <SiLinktree />
+                          <SiLinktree className="text-lime-500" />
                           LinkTree
                         </a>
                       }

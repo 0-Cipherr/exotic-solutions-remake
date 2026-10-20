@@ -4,16 +4,14 @@ import { StickyFooter } from "./StickyFooter";
 
 function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-black">
+    <div className="min-h-screen flex flex-col bg-black">
       <NavigatorMenu />
 
       <main className="flex-1">
         <HomeElements />
       </main>
 
-      <div className="absolute ">
-        <StickyFooter />
-      </div>
+      <StickyFooter />
     </div>
   );
 }

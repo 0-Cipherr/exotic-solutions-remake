@@ -41,7 +41,7 @@ function MobileHome() {
 
   return (
     <div className="visible md:hidden w-full min-w-0 overflow-hidden mt-3">
-      <h1 className="mt-10 text-center text-4xl font-semibold text-white hover:animate-pulse  ">
+      <h1 className="mt-10 text-center text-4xl font-semibold text-[#e8dfcc] hover:animate-pulse  ">
         Stylish Websites
       </h1>
 
@@ -106,17 +106,33 @@ function MobileHome() {
           Expirience
         </h1>
         <div className="w-80  m-auto mt-10">
-          <LanguageGrid />
+          <LanguageGrid gridSize={8} />
         </div>
 
         <div className="w-80 m-auto">
-          <h1 className="text-4xl text-center mt-30 font-extrabold hover:animate-pulse underline  ">
+          <h1 className="text-4xl text-center mt-30 font-extrabold hover:animate-pulse  text-[#e8dfcc] ">
             Accomplishments
           </h1>
           <div className="mt-10 tech-float grid grid-flow-cols gap-5 ">
             <ProjectPost
+              name="ColorStack"
+              headline="Member · Computer Science Community"
+              date="October 2026 - Present"
+              badge="Community Member"
+              title="💻 ColorStack Member"
+              description="Proud member of ColorStack, a community supporting Black and Latinx computer science students through professional development, mentorship, and opportunities to grow and succeed in the tech industry."
+              technologies={[
+                "Computer Science",
+                "Professional Development",
+                "Community",
+              ]}
+              link="https://www.colorstack.org/"
+              linkLabel="Visit ColorStack"
+              emblemSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2-eyR7E07d_vI89R2nVQFLSPumD7SN8U5a-E0SkfoxA&s=10"
+            />
+            <ProjectPost
               name="Exotic Solutions"
-              headline="Software Engineer · Blockchain Developer"
+              headline="Multichain Yield Infrastructure "
               badge="Currently Building"
               title="Building Telos — Cross-Chain Yield Infrastructure"
               description="Currently developing Telos, a cross-chain DeFi protocol focused on making yield strategies accessible through a unified vault infrastructure.
@@ -130,28 +146,34 @@ Building ERC-4626 vaults, clone-based deployments, and cross-chain messaging wit
                 "OpenZeppelin",
                 "EVM",
               ]}
-              link="https://github.com/0-Cipherr"
-              linkLabel="Explore My GitHub"
+              link="https://www.base.org/blog/announcing-the-onchain-summer-buildathon-winners#:~:text=FrenMint%20for%20letting%20users%20maximize%20their%20experience%20on%20friend%2Etech"
+              linkLabel="View Anoouncment!"
+              emblemSrc={
+                "https://avatars.githubusercontent.com/u/330475156?s=200&v=4"
+              }
             />
             <ProjectPost
-              name="Exotic Solutions"
-              headline="Software Engineer · Blockchain Developer"
+              name="FrenMint"
+              headline="Web3 App/Blockchain Finance "
               date="2022"
               badge="Hackathon Winner"
               title="🏆 Coinbase-Sponsored Blockchain Hackathon"
               description="Won a Coinbase-sponsored blockchain hackathon in 2022. An early milestone in my journey building blockchain applications and exploring decentralized technology."
               technologies={["Blockchain", "Solidity", "Web3"]}
-              link="YOUR_PROJECT_URL"
-              linkLabel="Explore the Project"
+              link="https://www.base.org/blog/announcing-the-onchain-summer-buildathon-winners#:~:text=FrenMint%20for%20letting%20users%20maximize%20their%20experience%20on%20friend%2Etech"
+              linkLabel="View Announcment"
+              emblemSrc={
+                "https://devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2F28ac103c2a0e4d29b02625d2b29b4d60%2Fprojects%2F1e1b2953d68e40aaa347036f9f9d2763%2F5c38d6c4-9c32-4070-858a-846aab338cc0.jpeg&w=1024&q=75"
+              }
             />
           </div>
         </div>
 
-        <div className="mt-20 text-3xl gap-3 font-bold flex justify-center">
+        <div className=" tech-float mt-20 mb-15 text-3xl gap-3 font-bold flex justify-center ">
           <h1 className="text-md">Connect WIth Me</h1>
           <div className="flex gap-2">
             <button className="flex justify-start  border  border-[#3d3123] bg-[#161514] px-5  py-1 rounded-sm text-[20px] border-">
-              <div className="flex border    gap-3    m-auto">
+              <div className="flex     gap-3    m-auto">
                 <img
                   src="https://cdn-icons-png.magnific.com/256/3800/3800024.png?semt=ais_white_label"
                   alt=""
@@ -161,7 +183,7 @@ Building ERC-4626 vaults, clone-based deployments, and cross-chain messaging wit
               </div>
             </button>
             <button className="flex justify-start  border  border-[#3d3123] bg-[#161514] px-5  py-1 rounded-sm text-[20px] border-">
-              <div className="flex border    gap-3    m-auto">
+              <div className="flex     gap-3    m-auto">
                 <img
                   src="https://www.svgrepo.com/show/353655/discord-icon.svg"
                   alt=""
