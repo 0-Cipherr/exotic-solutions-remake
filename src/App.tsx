@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import logoE from "./assets/logoE.png";
 import Home from "./componentsSub/Home.tsx";
-
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(true);
@@ -30,9 +30,9 @@ function App() {
         <div className={`pure-splash ${!isLoading ? "fade-out" : ""}`}>
           <div className="h-full w-full">
             <img
-              src="http://localhost:5173/src/assets/logo.png"
+              src={logoE}
               alt="App Splash Logo"
-              className="splash-image animate-pulse mt-50   m-auto"
+              className="splash-image animate-pulse mt-50   w-70 m-auto"
             />
           </div>
         </div>

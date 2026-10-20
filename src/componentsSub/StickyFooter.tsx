@@ -1,7 +1,7 @@
 import ima from "../assets/ima.png";
 export function StickyFooter() {
   return (
-    <footer className="visble md:hidden bottom-0 left-0 z-50 w-full border-t border-[#33291D] bg-black px-9 h-19  text-white">
+    <footer className="visble md:hidden bottom-0 left-0 z-50 w-full border-t border-b border-[#33291D] bg-black px-9 h-19  text-white">
       <div className="flex min-h-20  max-w-7xl items-center justify-between">
         <button
           className="text-white hover:bg-white/10 hover:text-white"
