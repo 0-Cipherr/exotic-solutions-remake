@@ -43,6 +43,7 @@ function LanguageGrid({ gridSize }: any) {
   return (
     <div className="mx-auto grid w-full grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-4">
       {technologies.slice(0, gridSize).map((item, index) => {
+        const Icon: any = item?.Icon;
         const result = (
           <>
             <div
@@ -53,18 +54,22 @@ function LanguageGrid({ gridSize }: any) {
             hover:border-[#C6A15B]/60 hover:bg-[#171410]
             hover:shadow-[0_0_25px_rgba(198,161,91,0.07)]"
             >
-              <item.Icon
-                size={40}
-                color="currentColor"
-                className="text-[#E8DFCC] transition-all duration-300
+              {Icon && (
+                <>
+                  <Icon
+                    size={40}
+                    color="currentColor"
+                    className="text-[#E8DFCC] transition-all duration-300
               group-hover:scale-110 group-hover:text-[#C6A15B]"
-                style={{
-                  stroke: "currentColor",
-                  strokeWidth: 0.6,
-                  paintOrder: "stroke",
-                }}
-                aria-label={name}
-              />
+                    style={{
+                      stroke: "currentColor",
+                      strokeWidth: 0.6,
+                      paintOrder: "stroke",
+                    }}
+                    aria-label={name}
+                  />
+                </>
+              )}
 
               <span
                 className="text-sm tracking-wide text-[#928675]
