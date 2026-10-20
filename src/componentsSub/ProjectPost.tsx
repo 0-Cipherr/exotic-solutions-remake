@@ -12,6 +12,7 @@ type ProjectPostProps = {
   link?: string;
   linkLabel?: string;
   footer?: ReactNode;
+  emblemSrc: string;
 };
 
 function ProjectPost({
@@ -27,7 +28,7 @@ function ProjectPost({
   linkLabel = "View Project",
   footer,
   emblemSrc,
-}: any) {
+}: ProjectPostProps) {
   return (
     <article
       className="group w-full overflow-hidden rounded-2xl border
@@ -99,7 +100,7 @@ function ProjectPost({
         {/* Technology tags */}
         {technologies.length > 0 && (
           <div className="mt-5 flex flex-wrap gap-2">
-            {technologies.map((technology) => (
+            {technologies.map((technology: any) => (
               <span
                 key={technology}
                 className="rounded-full border border-[#33291D]

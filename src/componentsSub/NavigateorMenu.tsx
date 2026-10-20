@@ -1,7 +1,5 @@
 "use client";
 
-import * as React from "react";
-
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -128,25 +126,5 @@ export function NavigatorMenu() {
         </NavigationMenu>
       </div>
     </div>
-  );
-}
-
-function ListItem({
-  title,
-  children,
-  href,
-  ...props
-}: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
-  return (
-    <li {...props}>
-      <NavigationMenuLink
-        render={
-          <div className="flex flex-col gap-1 text-sm">
-            <div className="leading-none font-medium">{title}</div>
-            <div className="line-clamp-2">{children}</div>
-          </div>
-        }
-      />
-    </li>
   );
 }

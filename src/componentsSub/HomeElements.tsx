@@ -5,11 +5,6 @@ import LanguageGrid from "./LanguageGrid";
 import MobileHome from "./MobileHome";
 
 function HomeElements() {
-  const webMockImages = [
-    "https://exoticsolutions.vercel.app/mobile1.png",
-    "https://exoticsolutions.vercel.app/desktop1.png",
-  ];
-
   const username = "0-Cipherr";
 
   const containerRef = useRef<HTMLDivElement>(null);

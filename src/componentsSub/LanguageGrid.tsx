@@ -40,8 +40,6 @@ const technologies = [
   { name: "OpenZeppelin", Icon: SiOpenzeppelin, category: "Blockchain" },
 ];
 function LanguageGrid({ gridSize }: any) {
-  let currIndex = 0;
-
   return (
     <div className="mx-auto grid w-full grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-4">
       {technologies.slice(0, gridSize).map((item, index) => {
