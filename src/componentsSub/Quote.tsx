@@ -24,12 +24,18 @@ function Quote() {
       </h1>
 
       <div className=" flex justify-center    flex gap-3">
-        <FaSlack className="text-[30px] text-orange-400" />
-        <FaInstagram className="text-[28px] text-purple-500" />
-
-        <FaLinkedin className="text-[30px] text-blue-400 border rounded-md" />
-        <FaDiscord className="text-[30px] text-blue-500" />
-
+        <a href="https://telos-shs6494.slack.com/team/U0C8SD7RU78">
+          <FaSlack className="text-[30px] text-orange-400" />
+        </a>
+        <a href="">
+          <FaInstagram className="text-[28px] text-purple-500" />
+        </a>
+        <a href="">
+          <FaLinkedin className="text-[30px] text-blue-400 border rounded-md" />
+        </a>{" "}
+        <a href="rcastillodev">
+          <FaDiscord className="text-[30px] text-blue-500" />
+        </a>{" "}
         <FaGithub className="text-[28px]" />
       </div>
     </div>

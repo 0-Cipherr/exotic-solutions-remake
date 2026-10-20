@@ -169,31 +169,41 @@ Building ERC-4626 vaults, clone-based deployments, and cross-chain messaging wit
           </div>
         </div>
 
-        <div className=" tech-float mt-20 mb-15 text-3xl gap-3 font-bold flex justify-center ">
+        <div className="  mt-20 mb-15 text-3xl gap-3 font-bold flex justify-center ">
           <h1 className="text-md">Connect WIth Me</h1>
           <div className="flex gap-2">
             <button className="flex justify-start  border  border-[#3d3123] bg-[#161514] px-5  py-1 rounded-sm text-[20px] border-">
-              <div className="flex     gap-3    m-auto">
+              <a
+                href="https://telos-shs6494.slack.com/team/U0C8SD7RU78"
+                target="_blank"
+                className="flex     gap-3    m-auto"
+              >
                 <img
                   src="https://cdn-icons-png.magnific.com/256/3800/3800024.png?semt=ais_white_label"
                   alt=""
                   className="w-5.5 mt-auto mb-auto"
                 />
-                <h1 className="text-nowrap text-md  mt-auto mb-auto">Slack</h1>
-              </div>
+                <h1 className="text-nowrap text-md  mt-auto mb-auto hover:text-gray-400">
+                  Slack
+                </h1>
+              </a>
             </button>
-            <button className="flex justify-start  border  border-[#3d3123] bg-[#161514] px-5  py-1 rounded-sm text-[20px] border-">
+            <a
+              href="https://discordapp.com/users/1042632548477567006"
+              target="_blank"
+              className="flex justify-start  border  border-[#3d3123] bg-[#161514] px-5  py-1 rounded-sm text-[20px] border-"
+            >
               <div className="flex     gap-3    m-auto">
                 <img
                   src="https://www.svgrepo.com/show/353655/discord-icon.svg"
                   alt=""
                   className="w-5.5 mt-auto mb-auto"
                 />
-                <h1 className="text-nowrap text-md  mt-auto mb-auto">
+                <h1 className="text-nowrap text-md hover hover:text-gray-400  mt-auto mb-auto">
                   Discord
                 </h1>
               </div>
-            </button>
+            </a>
           </div>
         </div>
       </div>
