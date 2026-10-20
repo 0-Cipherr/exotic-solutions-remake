@@ -167,7 +167,7 @@
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -4.5px;
     border: 5px solid transparent;
@@ -180,5 +180,69 @@
   &::after {
     right: 0;
     border-right-color: var(--border);
+  }
+}
+
+/* Master Frame Lock - Keeps scrollbars hidden ONLY during splash */
+.app-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  overflow: hidden; /* Locked initially */
+}
+
+/* NEW: This class restores your page's standard scrolling ability */
+.app-container.scroll-allowed {
+  overflow-y: auto;
+  height: auto; /* Allows the container to stretch naturally with your Home page content */
+}
+
+/* Centered Black Shield Layer */
+.pure-splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Splash Image Styling & Entry Animation */
+.splash-image {
+  max-width: 500px;
+  height: auto;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: logoFadeIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0.2s forwards;
+}
+
+.pure-splash.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Main App Entry Transition */
+.main-app {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.main-app.fade-in {
+  opacity: 1;
+}
+
+@keyframes logoFadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

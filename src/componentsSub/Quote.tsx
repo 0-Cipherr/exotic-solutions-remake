@@ -6,7 +6,7 @@ function Quote() {
       <img
         src="https://avatars.githubusercontent.com/u/197652733?v=4"
         alt=""
-        className="size-40 m-auto"
+        className="size-40 m-auto tech-float border rounded-full"
       />
       <h1 className="text-[#e8dfcc]  text-lg w-90 text-center p-8  m-auto mt-auto">
         Turning ideas into reality through custom software development, creative

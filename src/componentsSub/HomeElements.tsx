@@ -40,7 +40,7 @@ function HomeElements() {
           <Quote />
           <MobileHome />
         </div>
-        <div className=" hidden md:block  md:justify-end md:w-full m-auto">
+        <div className="tech-float  hidden md:block  md:justify-end md:w-full m-auto p-8">
           <LanguageGrid gridSize={8} />
         </div>
       </div>
