@@ -1,26 +1,47 @@
 import {
+  SiExpress,
+  SiFlask,
   SiGit,
   SiJavascript,
+  SiNodedotjs,
+  SiOpenzeppelin,
   SiPostgresql,
   SiPython,
   SiReact,
   SiSolidity,
   SiTypescript,
+  SiVite,
 } from "@icons-pack/react-simple-icons";
-const languages = [
-  { name: "Solidity", Icon: SiSolidity },
-  { name: "Python", Icon: SiPython },
-  { name: "TypeScript", Icon: SiTypescript },
-  { name: "JavaScript", Icon: SiJavascript },
-  { name: "PostgreSQL", Icon: SiPostgresql },
-  { name: "React", Icon: SiReact },
-  { name: "Git", Icon: SiGit },
+
+import { FaJava } from "react-icons/fa";
+
+const technologies = [
+  // Programming Languages
+  { name: "Solidity", Icon: SiSolidity, category: "Languages" },
+  { name: "TypeScript", Icon: SiTypescript, category: "Languages" },
+  { name: "JavaScript", Icon: SiJavascript, category: "Languages" },
+  { name: "Python", Icon: SiPython, category: "Languages" },
+  { name: "Java", Icon: FaJava, category: "Languages" },
+  { name: "SQL", Icon: SiPostgresql, category: "Languages" },
+
+  // Frontend
+  { name: "React", Icon: SiReact, category: "Frontend" },
+  { name: "Vite", Icon: SiVite, category: "Frontend" },
+
+  // Backend
+  { name: "Node.js", Icon: SiNodedotjs, category: "Backend" },
+  { name: "Express", Icon: SiExpress, category: "Backend" },
+  { name: "Flask", Icon: SiFlask, category: "Backend" },
+
+  // Blockchain & Development
+  { name: "OpenZeppelin", Icon: SiOpenzeppelin, category: "Blockchain" },
+  { name: "Git", Icon: SiGit, category: "Tools" },
 ];
 
 function LanguageGrid() {
   return (
-    <div className=" mx-auto grid w-full grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6">
-      {languages.map(({ name, Icon }) => (
+    <div className="mx-auto grid w-full grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-4">
+      {technologies.map(({ name, Icon }) => (
         <div
           key={name}
           className="group flex flex-col items-center justify-center gap-4
@@ -33,7 +54,7 @@ function LanguageGrid() {
             size={40}
             color="currentColor"
             className="text-[#E8DFCC] transition-all duration-300
-    group-hover:scale-110 group-hover:text-[#C6A15B]"
+              group-hover:scale-110 group-hover:text-[#C6A15B]"
             style={{
               stroke: "currentColor",
               strokeWidth: 0.6,
@@ -41,6 +62,7 @@ function LanguageGrid() {
             }}
             aria-label={name}
           />
+
           <span
             className="text-sm tracking-wide text-[#928675]
               transition-colors duration-300

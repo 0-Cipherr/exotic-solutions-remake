@@ -11,7 +11,9 @@ function Home() {
         <HomeElements />
       </main>
 
-      <StickyFooter />
+      <div className="absolute ">
+        <StickyFooter />
+      </div>
     </div>
   );
 }
