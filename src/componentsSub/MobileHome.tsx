@@ -102,7 +102,7 @@ function MobileHome() {
         </div>
       </section>
       <div className="text-white">
-        <h1 className="text-4xl text-center mt-30 font-extrabold hover:animate-pulse ">
+        <h1 className="text-4xl  text-center mt-30 font-extrabold hover:animate-pulse ">
           Expirience
         </h1>
         <div className="w-80  m-auto mt-10">

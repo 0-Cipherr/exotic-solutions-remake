@@ -40,12 +40,12 @@ function HomeElements() {
   const blockMargin = containerWidth < 400 ? 2 : 3;
   return (
     <div className=" justify-between w-full md:p-5  m-auto">
-      <div className="md:flex md:mt-20">
+      <div className="md:flex md:mt-8">
         <div className="w-full   ">
           <Quote />
           <MobileHome />
         </div>
-        <div className=" hidden md:block  md:justify-end md:w-full">
+        <div className=" hidden md:block  md:justify-end md:w-full m-auto">
           <LanguageGrid gridSize={8} />
         </div>
       </div>

@@ -75,52 +75,67 @@
     font-size: 12px;
   }
 }
-
 @keyframes luxury-float {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
   }
+
   50% {
-    transform: translateY(-6px);
+    transform: translate3d(0, -10px, 0);
+    -webkit-transform: translate3d(0, -10px, 0);
   }
 }
 
 .tech-float {
-  animation: luxury-float 2s ease-in-out infinite;
+  animation: luxury-float 1.2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  -webkit-animation: luxury-float 1.2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
-/* Offset each card so they float at different times */
+/* Stagger each card for a natural floating effect */
 .tech-float:nth-child(2) {
-  animation-delay: 0.4s;
+  animation-delay: 0.15s;
+  -webkit-animation-delay: 0.15s;
 }
 
 .tech-float:nth-child(3) {
-  animation-delay: 0.8s;
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
 }
 
 .tech-float:nth-child(4) {
-  animation-delay: 1.2s;
+  animation-delay: 0.45s;
+  -webkit-animation-delay: 0.45s;
 }
 
 .tech-float:nth-child(5) {
-  animation-delay: 0.6s;
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
 }
 
 .tech-float:nth-child(6) {
-  animation-delay: 1s;
+  animation-delay: 0.35s;
+  -webkit-animation-delay: 0.35s;
 }
 
 .tech-float:nth-child(7) {
-  animation-delay: 1.4s;
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
 }
 
 .tech-float:nth-child(8) {
-  animation-delay: 0.2s;
+  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
 }
 
-@media (prefers-reduced-motion: reduce) {
+/* Keep animations smooth on mobile */
+@media (max-width: 768px) {
   .tech-float {
-    animation: none;
+    animation-duration: 1.4s;
+    -webkit-animation-duration: 1.4s;
   }
 }

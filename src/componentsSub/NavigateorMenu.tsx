@@ -22,10 +22,10 @@ export function NavigatorMenu() {
         <img src={logo} alt="Logo" className="w-50" />
       </div>
       <div className="w-full  text-[#e8dfcc]  m-auto flex justify-end gap-3">
-        <button className="mt-auto mb-auto hover:animate-pulse">
+        <button className="mt-auto hidden md:block  mb-auto hover:animate-pulse">
           <h1>Expirience</h1>
         </button>
-        <button className="mt-auto mb-auto hover:animate-pulse">
+        <button className="mt-auto mb-auto hidden md:block hover:animate-pulse">
           <h1>Accomplishments </h1>
         </button>
 
