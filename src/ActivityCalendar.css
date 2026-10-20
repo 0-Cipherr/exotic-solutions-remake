@@ -1,0 +1,77 @@
+.github-activity {
+  box-sizing: border-box;
+  width: 90%;
+  min-width: 0;
+  padding: clamp(16px, 4vw, 28px);
+  color: #e8dfcc;
+  background: #080808;
+  border: 1px solid #33291d;
+  border-radius: 10px;
+}
+
+.github-activity-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.github-activity-label {
+  color: #c6a15b;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.github-activity-header h2 {
+  margin: 10px 0;
+  color: #e8dfcc;
+  font-size: clamp(22px, 5vw, 30px);
+  font-weight: 100;
+  letter-spacing: -0.03em;
+}
+
+.github-activity-header p {
+  margin: 0;
+  color: #928675;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.github-activity-link {
+  color: #c6a15b;
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.github-activity-link:hover {
+  color: #f4d58d;
+}
+
+.github-activity-calendar {
+  width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #66502d transparent;
+}
+
+.github-activity-calendar a {
+  color: #c6a15b;
+}
+
+@media (max-width: 360px) {
+  .github-activity-header {
+    gap: 10px;
+  }
+
+  .github-activity-header p {
+    font-size: 12px;
+  }
+}
