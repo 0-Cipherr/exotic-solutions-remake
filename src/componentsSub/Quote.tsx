@@ -2,19 +2,18 @@ import { FaDiscord, FaGithub, FaLinkedin, FaSlack } from "react-icons/fa";
 
 function Quote() {
   return (
-    <div className="hidden md:block text-white m-auto  mt-auto  h-full  ">
+    <div className="hidden md:block text-white m-auto  m-auto  h-full  ">
       <img
         src="https://avatars.githubusercontent.com/u/197652733?v=4"
         alt=""
-        className="size-40 m-auto tech-float border rounded-full"
+        className="size-40 m-auto  border rounded-full"
       />
       <h1 className="text-[#e8dfcc]  text-lg w-90 text-center p-8  m-auto mt-auto">
-        Turning ideas into reality through custom software development, creative
-        problem-solving, and modern technology. From web applications and
-        automation to unique digital products, every project combines clean
-        code, thoughtful design, and practical functionality. Focused on
-        building scalable, efficient, and user-friendly solutions with quality,
-        performance, affordable pricing, and fast turnaround times.
+        I’m a software developer passionate about building impactful technology,
+        from full-stack applications to blockchain infrastructure. I enjoy
+        tackling complex problems, exploring new ideas, and turning ambitious
+        concepts into practical, scalable solutions. My focus is on writing
+        clean, efficient code and building software that makes a difference.
       </h1>
 
       <div className=" flex justify-center    flex gap-3">

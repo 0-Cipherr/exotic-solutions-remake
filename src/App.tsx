@@ -27,12 +27,14 @@ function App() {
     <div className={`app-container ${!isLoading ? "scroll-allowed" : ""}`}>
       {/* 1. Black Screen Overlay Layer */}
       {isVisible && (
-        <div className={`pure-splash ${!isLoading ? "fade-out" : ""}`}>
+        <div
+          className={`pure-splash animate-collapsible- ${!isLoading ? "fade-out" : ""}`}
+        >
           <div className="h-full w-full">
             <img
               src={logoE}
               alt="App Splash Logo"
-              className="splash-image animate-pulse mt-50   w-70 m-auto"
+              className="splash-image  mt-50 size-400   m-auto"
             />
           </div>
         </div>

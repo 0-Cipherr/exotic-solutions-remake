@@ -1,6 +1,7 @@
 .github-activity {
   box-sizing: border-box;
-  width: 90%;
+  width: 100%;
+  max-width: none;
   min-width: 0;
   padding: clamp(16px, 4vw, 28px);
   color: #e8dfcc;
@@ -60,6 +61,7 @@
   padding-bottom: 8px;
   scrollbar-width: thin;
   scrollbar-color: #66502d transparent;
+  box-sizing: border-box;
 }
 
 .github-activity-calendar a {
@@ -75,67 +77,60 @@
     font-size: 12px;
   }
 }
+
+/* Floating animation */
+
 @keyframes luxury-float {
   0%,
   100% {
     transform: translate3d(0, 0, 0);
-    -webkit-transform: translate3d(0, 0, 0);
   }
 
   50% {
     transform: translate3d(0, -10px, 0);
-    -webkit-transform: translate3d(0, -10px, 0);
   }
 }
 
 .tech-float {
   animation: luxury-float 1.2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
-  -webkit-animation: luxury-float 1.2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
   will-change: transform;
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
 }
 
-/* Stagger each card for a natural floating effect */
+/* Stagger the animation */
+
 .tech-float:nth-child(2) {
   animation-delay: 0.15s;
-  -webkit-animation-delay: 0.15s;
 }
 
 .tech-float:nth-child(3) {
   animation-delay: 0.3s;
-  -webkit-animation-delay: 0.3s;
 }
 
 .tech-float:nth-child(4) {
   animation-delay: 0.45s;
-  -webkit-animation-delay: 0.45s;
 }
 
 .tech-float:nth-child(5) {
   animation-delay: 0.2s;
-  -webkit-animation-delay: 0.2s;
 }
 
 .tech-float:nth-child(6) {
   animation-delay: 0.35s;
-  -webkit-animation-delay: 0.35s;
 }
 
 .tech-float:nth-child(7) {
   animation-delay: 0.5s;
-  -webkit-animation-delay: 0.5s;
 }
 
 .tech-float:nth-child(8) {
   animation-delay: 0.1s;
-  -webkit-animation-delay: 0.1s;
 }
 
-/* Keep animations smooth on mobile */
+/* Mobile animation settings */
+
 @media (max-width: 768px) {
   .tech-float {
     animation-duration: 1.4s;
-    -webkit-animation-duration: 1.4s;
   }
 }

@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { GitHubCalendar } from "react-github-calendar";
 import Quote from "../componentsSub/Quote";
 import LanguageGrid from "./LanguageGrid";
 import MobileHome from "./MobileHome";
@@ -23,29 +22,33 @@ function HomeElements() {
     return () => observer.disconnect();
   }, []);
 
-  const blockSize =
-    containerWidth < 350
-      ? 6
-      : containerWidth < 450
-        ? 8
-        : containerWidth < 600
-          ? 9
-          : 12;
+  // Adapt contribution square spacing to the available width.
+  const blockMargin = containerWidth < 500 ? 2 : 3;
 
-  const blockMargin = containerWidth < 400 ? 2 : 3;
+  // Estimate the square size needed to use the available width.
+  const weekCount = 53;
+  const availableWidth = Math.max(0, containerWidth - 40);
+
+  const blockSize = Math.max(
+    6,
+    Math.floor((availableWidth - weekCount * blockMargin) / weekCount),
+  );
+
   return (
-    <div className=" justify-between w-full md:p-5  m-auto">
-      <div className="md:flex md:mt-8">
-        <div className="w-full   ">
+    <div className="m-auto w-full justify-between md:p-5">
+      <div className="md:mt-8 md:flex">
+        <div className="w-full">
           <Quote />
           <MobileHome />
         </div>
-        <div className="tech-float  hidden md:block  md:justify-end md:w-full m-auto p-8">
+
+        <div className="tech-float m-auto hidden w-full p-8 md:block md:justify-end">
           <LanguageGrid gridSize={8} />
         </div>
       </div>
-      <div className="hidden md:block">
-        <section className="github-activity mt-20 m-auto">
+
+      <div className="hidden w-full md:block">
+        {/* <section className="github-activity mx-auto mt-20 w-full">
           <header className="github-activity-header">
             <div>
               <span className="github-activity-label">DEVELOPER ACTIVITY</span>
@@ -64,7 +67,11 @@ function HomeElements() {
               View GitHub ↗
             </a>
           </header>
-          <div ref={containerRef} className="github-activity-calendar ">
+
+          <div
+            ref={containerRef}
+            className="github-activity-calendar w-full min-w-0"
+          >
             {containerWidth > 0 && (
               <GitHubCalendar
                 username={username}
@@ -74,18 +81,13 @@ function HomeElements() {
                 fontSize={containerWidth < 400 ? 10 : 12}
                 showTotalCount
                 theme={{
-                  dark: [
-                    "#171513", // No contributions
-                    "#3B3020", // Low activity
-                    "#66502D", // Moderate activity
-                    "#9A763A", // High activity
-                    "#D6B36A", // Highest activity
-                  ],
+                  dark: ["#171513", "#3B3020", "#66502D", "#9A763A", "#D6B36A"],
                 }}
               />
             )}
           </div>
-        </section>
+        </section> */}
+        <div className="mt-3"></div>
       </div>
     </div>
   );
